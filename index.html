@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<img src="BCSL.png" width="400" align="left" hspace="550" vspace="10" />
+
+<title>
+	Parasta soittaa saulille!
+</title>
+<head> 
+<style>
+	
+body{
+	background:url("kuvat/sauli.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+#otsikko {
+	font-size : 40px;
+	font-weight : bold;
+	position : absolute; 
+	top : 15px;
+	left : 550px;
+	color : #ff0400;
+	
+}
+
+#otsikko2 {
+	font-size : 40px;
+	font-weight : bold;
+	position : absolute; 
+	top : 15px;
+	left : 810px;
+	color : #fbff00;
+
+
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+	<div id="otsikko">
+	<font >
+	Parasta soittaa	
+	</div>
+
+	<div id="otsikko2">
+	Saulille
+	</div>
+	
+</body>
+
+<link id="linkit">
+	<a href="youtube.com">Klikkaamalla Klikkaa tästä!.html -sivulle</a>
+
+
+
+<audio id="myaudio" controls>
+  <source src="BCS.mp3" type="audio/mpeg">
+</audio>
+
+<br /><br />
+<button onclick="toggle(this);">Hide Audio</button>
+
+<script>
+  let toggle = button => {
+     let element = document.getElementById("myaudio");
+     let hidden = element.getAttribute("hidden");
+
+     if (hidden) {
+        element.removeAttribute("hidden");
+        button.innerText = "Hide Audio";
+     } else {
+        element.setAttribute("hidden", "hidden");
+        button.innerText = "Show Audio";
+     }
+  }
+</script></body>
+
+
+</html>
