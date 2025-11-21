@@ -1,16 +1,23 @@
-!doctype html>
+<!doctype html>
 <html>
-<img src="BCSL.png" width="400" align="left" hspace="550" vspace="10" />
+<img src="BCSL.png" width="400" align="left" hspace="700" vspace="10" />
 
+<img src="kuvat/saul-goodman.gif" width="400" align="right" border="1" hspace="0" 
+vspace="0"/>
+<br>
+<img src="kuvat/saulisauli.gif" width="400" align="right" border="1" hspace="0" vspace="0" />
+<br>
 <title>
 	Parasta soittaa saulille!
 </title>
 <head> 
+
 <style>
+
 	
 body{
 	background:url("kuvat/sauli.png");
-	background-repeat: no-repeat;
+	background-repeat: no-repeat; 
 	background-size: cover;
 
 }
@@ -20,9 +27,10 @@ body{
 	font-weight : bold;
 	position : absolute; 
 	top : 15px;
-	left : 550px;
+	left : 700px;
 	color : #fbff00;
-	
+	width: 20%
+	border: 1px black solid;
 }
 
 #otsikko2 {
@@ -30,19 +38,58 @@ body{
 	font-weight : bold;
 	position : absolute; 
 	top : 15px;
-	left : 810px;
+	left : 960px;
 	color : #ff0400;
 
 
 }
+ 
+#linkit {
+	position : center;
+	top: 21%;
+	left: 0%
+	font-size: 40;
+}
+
+a:link {
+	color: #ff0000
+
+}
+
+a:visited {
+	color: #ff0000
+}
+
+a:hover {
+	color: #ffe100
+
+}
+
+a:active {
+	color: #ff0000
+
+}
+
+#linkit{
+	position : absolute;
+	top: 21%
+	left: 100%
+	font-size: 40;
+
+
 
 </style>
 
 
 </head>
-
-
 <body>
+<div id="linkit">
+<font size="70px"><a href="ekasivu.html"> Tästä saulin TRVE metalliin!!</a>
+</br></br>
+	<a href="sauli.html">Soita Saulille!</a>
+</div>
+
+
 	<div id="otsikko">
 	<font >
 	Parasta soittaa	
@@ -53,18 +100,26 @@ body{
 	</div>
 	
 </body>
-
-<link id="linkit">
-	<a href="ekasivu.html">Tästä Saulin TRVE ostoskärry projektille</a>
-
-<audio src="/music/good_enough.mp3" width="180" height="90" loop="false" autostart="false" hidden="true" />
+</br></br><br><br><br><br>
+<audio id="myaudio" controls>
+  <source src="BCS.mp3" autoplay> type="audio/mpeg">
 </audio>
+</br>
+<button onclick="toggle(this);">Piilota ääni!</button>
 
+<script>
+  let toggle = button => {
+     let element = document.getElementById("myaudio");
+     let hidden = element.getAttribute("hidden");
 
-
-</html>
+     if (hidden) {
+        element.removeAttribute("hidden");
+        button.innerText = "Hide Audio";
+     } else {
+        element.setAttribute("hidden", "hidden");
+        button.innerText = "Näytä ääni!";
+     }
+  }
 </script></body>
-
-
 
 </html>
