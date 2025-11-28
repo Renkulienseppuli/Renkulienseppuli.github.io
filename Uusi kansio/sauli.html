@@ -93,6 +93,30 @@ img:hover {
 
 <img src="kuvat/saulinumero.png" alt="Pineapple" width="600" height="300" hspace="650" "vspace="5s0">
 
+
+</br></br><br><br><br><br>
+<audio id="myaudio" controls>
+  <source src="MALFORMED.mp3" autoplay> type="audio/mpeg">
+</audio>
+</br>
+<button onclick="toggle(this);">Piilota ääni!</button>
+
+<script>
+  let toggle = button => {
+     let element = document.getElementById("myaudio");
+     let hidden = element.getAttribute("hidden");
+
+     if (hidden) {
+        element.removeAttribute("hidden");
+        button.innerText = "Hide Audio";
+     } else {
+        element.setAttribute("hidden", "hidden");
+        button.innerText = "Näytä ääni!";
+     }
+  }
+</script></body>
+
+
 </body>
 
 </body>
